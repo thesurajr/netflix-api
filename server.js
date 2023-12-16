@@ -21,6 +21,9 @@ mongoose
   .catch((err) => {
     console.log("Server is not start");
   });
+  app.get('/', (req, res) => {
+    res.send('Hello, Express!');
+});
 
 app.use("/api/user", userRoutes);
 console.log(process.env.port);
