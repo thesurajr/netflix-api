@@ -5,6 +5,9 @@ const {
 } = require("../controllers/UserController");
 
 const router = require("express").Router();
+router.get('/', (req, res) => {
+  res.send('Hello, Express!');
+});
 
 router.get("/liked/:email", getLikedMovies);
 router.post("/add", addToLikedMovies);
